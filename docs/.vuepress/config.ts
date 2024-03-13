@@ -133,7 +133,6 @@ export default defineConfig({
     footer,
     // 额外右侧边栏
     extraSideBar,
-    sidebarDepth: 4,
-    displayAllHeaders: true,
+    sidebarDepth: 3,
   },
 });
