@@ -13,6 +13,11 @@ export default {
       //icon: "/icon/user.svg",
       href: "https://bolo.wuhobin.top",
     },
+    {
+      label: "提供CDN加速服务",
+      icon: "/icon/youpai.png",
+      href: "https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral",
+    },
   ],
   copyright: {
     href: "https://beian.miit.gov.cn/",
