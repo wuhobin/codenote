@@ -38,7 +38,7 @@ export default defineConfig({
       `,
     ],
   ],
-  //permalink: "/:slug",
+  permalink: "/:slug",
 
   // 监听文件变化，热更新
   extraWatchFiles: [".vuepress/*.ts", ".vuepress/sidebars/*.ts"],
@@ -133,6 +133,5 @@ export default defineConfig({
     footer,
     // 额外右侧边栏
     extraSideBar,
-    sidebarDepth: 3,
   },
 });

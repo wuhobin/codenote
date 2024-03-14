@@ -1,9 +1,10 @@
 ---
+permalink: /
 home: true
 heroImage: /logo.png
 heroText: Aurora~编程宝典
 actionText: 开始阅读 →
-actionLink: /notes/directory
+actionLink: /directory
 features:
   - title: 后端开发者
     details: Java、Spring、SpringBoot、SpringCloud、数据库、缓存中间件、分布式理论、微服务、AI、设计模式、容器化管理、前沿概念...

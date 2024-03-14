@@ -1,5 +1,10 @@
 # 本站作者 - 程序员Aurora
 
+> 本文作者：[程序员Aurora](/author.md)
+>
+> 本站地址：[https://codenote.wuhobin.top](https://codefather.cn)
+
+
 ## 个人介绍
 
 99 年，Java开发工程师。
@@ -7,7 +12,6 @@
 热爱分享编程知识，善于把 Java 后端、前端、项目讲得通俗易懂。
 
 会持续分享编程干货和好玩的知识~
-
 
 
 
@@ -24,7 +28,7 @@
 
 ### GitHub
 
-中国区排名前 20，有很多本人原创的项目代码~
+Github有很多本人原创的项目代码~
 
 地址：[https://github.com/wuhobin](https://github.com/wuhobin) 
 
