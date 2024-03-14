@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: Aurora~编程宝典
-actionText: 快速上手 →
+actionText: 开始阅读 →
 actionLink: /notes/directory
 features:
   - title: 后端开发者
