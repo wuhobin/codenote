@@ -1,5 +1,5 @@
 <template>
-    <main class="footer">
+    <main class="footer-con">
         <div v-for="(item, index) in footerList" :key="index" class="footer-item">
             <a :href="item.href" target="_blank" rel="noopener noreferrer">
                 <img v-if="item.icon" :src="item.icon" alt="icon" class="item-icon" />
@@ -40,7 +40,11 @@ export default {
 //@media (max-width: $MQMobile)
 //  .footer-item a
 //    margin-right 0 !important
+
 .footer
+  padding: 0rem !important
+
+.footer-con
   padding 2rem 0
   display flex
   justify-content center
