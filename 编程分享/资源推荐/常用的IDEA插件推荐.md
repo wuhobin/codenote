@@ -8,7 +8,7 @@ tags:
 
 > 本文作者：[程序员Aurora](/author.md)
 >
-> 本站地址：[https://codenote.wuhobin.top](https://codefather.cn)
+> 本站地址：[https://codenote.wuhobin.top](https://codenote.wuhobin.top)
 
 
 
