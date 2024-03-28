@@ -14,11 +14,6 @@ tags:
 
 > 背景：该文章所有的插件都是基于IntelliJ IDEA 2023.3.4 
 
-**需要破解idea开发工具的小伙伴可以点击下方连接获取，目前提供了windows系统**
-
-⭐️ [windows下idea激活工具](https://www.lanzouw.com/iV6VF1rg14bg) 密码：4p8e
-
-
 
 ## 推荐以下插件
 
