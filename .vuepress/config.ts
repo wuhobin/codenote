@@ -112,6 +112,17 @@ export default defineConfig({
     ],
     // https://github.com/tolking/vuepress-plugin-img-lazy
     ["img-lazy"],
+    [
+      '@vssue/vuepress-plugin-vssue', {
+        platform: 'github',
+        owner: 'wuhobin',
+        repo: 'codenote-comment',
+        autoCreateIssue: true,
+        locale: "zh",
+        clientId: 'c5c8d81617d1d0029b1d',
+        clientSecret: '3219e621ded4dbdab9c79a2efe5d8283885d9b96',
+      },
+    ]
   ],
   // 主题配置
   themeConfig: {

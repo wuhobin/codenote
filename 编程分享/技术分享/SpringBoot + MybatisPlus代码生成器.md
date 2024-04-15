@@ -152,5 +152,5 @@ public class CodeGeneratorPlus {
 
 ```
 
-
+<Vssue :title="$title" />
 

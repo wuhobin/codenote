@@ -94,3 +94,7 @@ tags:
 推荐等级：⭐️⭐️⭐️⭐️⭐️
 
 插件地址：`https://plugins.jetbrains.com/plugin/12798-tabnine-ai-code-completion--chat-in-java-js-ts-python--more`
+
+
+
+<Vssue :title="$title" />
