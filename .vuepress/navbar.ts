@@ -1,4 +1,4 @@
-import {NavItem} from "vuepress/config";
+import { NavItem } from "vuepress/config";
 
 export default [
     {
@@ -18,6 +18,19 @@ export default [
             {
                 text: "技术分享", link: "/编程分享/#技术分享",
             },
+        ]
+    },
+    {
+
+        text: "面试专题",
+        link: '/面试专题/',
+        items: [
+            {
+                text: "Mysql系列", link: "/面试专题/#Mysql系列",
+            },
+            {
+                text: "Redis系列", link: "/面试专题/#Redis系列",
+            }
         ]
     },
     {
