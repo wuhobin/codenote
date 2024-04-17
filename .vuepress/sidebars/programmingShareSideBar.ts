@@ -20,12 +20,5 @@ export default [
     children: [
       '技术分享/'
     ]
-  },
-  {
-    title: '面试专题',  
-    collapsable: true,
-    children: [
-      '面试专题/'
-    ]
   }
 ];
