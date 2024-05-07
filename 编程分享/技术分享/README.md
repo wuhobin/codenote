@@ -7,5 +7,6 @@
 
 ⭐️⭐️ [SpringBoot整合chatGPT，实现一个后端AI聊天机器人](./Springboot整合chatGPT，实现一个后端AI聊天机器人.md)
 
+⭐️ [SpringBoot使用AOP实现全局接口日志记录](./SpringBoot使用AOP实现全局接口日志记录.md)
 
 <Vssue :title="$title" />
