@@ -14,7 +14,7 @@ features:
     details: 前端+后端+数据库+网络安全+数据结构+服务器，统统包含！
 ---
 
-- 个人笔记 - 纯干货（持续更新）:100: - [ 立刻开始 ](https://codenote.wuhobin.top/)
+- 个人笔记 - 纯干货（持续更新）:100: - [ 立刻开始 ](https://ai.wuhobin.top/)
 
 <Footer />
 

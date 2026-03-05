@@ -5,7 +5,7 @@ import footer from "./footer";
 import extraSideBar from "./extraSideBar";
 
 const author = "程序员Aurora";
-const domain = "https://codenote.wuhobin.top";
+const domain = "https://ai.wuhobin.top";
 const tags = ["程序员", "编程", "计算机"];
 
 export default defineConfig({

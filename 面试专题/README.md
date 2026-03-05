@@ -7,6 +7,6 @@
 
 # Redis系列
 
-- [正在奋笔疾书中...](https://codenote.wuhobin.top)
+- [正在奋笔疾书中...](https://ai.wuhobin.top)
 
 <Vssue :title="$title" />

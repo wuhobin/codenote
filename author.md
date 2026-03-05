@@ -2,7 +2,7 @@
 
 > 本文作者：[程序员Aurora](/author.md)
 >
-> 本站地址：[https://codenote.wuhobin.top](https://codefather.cn)
+> 本站地址：[https://ai.wuhobin.top](https://ai.wuhobin.top)
 
 
 ## 个人介绍
@@ -13,7 +13,7 @@
 
 会持续分享编程干货和好玩的知识~
 
-
+Vibe Codeing持续更新中
 
 ## 知识分享
 

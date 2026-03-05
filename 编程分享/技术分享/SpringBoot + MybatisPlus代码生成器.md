@@ -8,7 +8,7 @@ tags:
 
 > 本文作者：[程序员Aurora](/author.md)
 >
-> 本站地址：[https://codenote.wuhobin.top](https://codenote.wuhobin.top)
+> 本站地址：[https://ai.wuhobin.top](https://ai.wuhobin.top)
 
 
  项目背景：SpringBoot3.1.0, MybatisPlus3.5.5

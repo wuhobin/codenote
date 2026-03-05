@@ -4,10 +4,10 @@
 >
 > 作者：[程序员Aurora](/author.md)
 >
-> 本站地址：[https://codenote.wuhobin.top](https://codenote.wuhobin.top)
+> 本站地址：[https://ai.wuhobin.top](https://ai.wuhobin.top)
 
 
 ## 本站内容
 - [编程干货分享](/编程分享)
 - [作者介绍](/author.md)
-- [正在奋笔疾书中...](https://codenote.wuhobin.top)
+- [正在奋笔疾书中...](https://ai.wuhobin.top)
