@@ -29,6 +29,10 @@
 
     <Home v-if="$page.frontmatter.home" />
 
+    <div v-if="$page.frontmatter.home" class="home-footer-wrapper">
+      <Footer />
+    </div>
+
     <Page
       v-else
       :sidebar-items="sidebarItems"
@@ -36,7 +40,6 @@
     >
       <template #top>
         <slot name="page-top" />
-
       </template>
       <template #bottom>
         <slot name="page-bottom" />
@@ -49,14 +52,12 @@
        :page-sidebar-items="pageSidebarItems"
        :sidebar-items="sidebarItems"
     >
-      <slot
-        name="page-sidebar-top"
-        #top
-      />
-      <slot
-        name="page-sidebar-bottom"
-        #bottom
-      />
+      <template #top>
+        <slot name="page-sidebar-top" />
+      </template>
+      <template #bottom>
+        <slot name="page-sidebar-bottom" />
+      </template>
     </PageSidebar>
   </div>
 </template>
@@ -178,3 +179,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+.home-footer-wrapper
+  margin-top auto
+</style>

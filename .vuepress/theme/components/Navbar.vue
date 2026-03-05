@@ -69,7 +69,7 @@ export default {
   },
 
   mounted () {
-    const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
+    const MOBILE_DESKTOP_BREAKPOINT = 719
     const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
     const handleLinksWrapWidth = () => {
       if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
@@ -85,9 +85,7 @@ export default {
 }
 
 function css (el, property) {
-  // NOTE: Known bug, will return 'auto' if style value is 'auto'
   const win = el.ownerDocument.defaultView
-  // null means not to return pseudo styles
   return win.getComputedStyle(el, null)[property]
 }
 </script>
@@ -100,31 +98,65 @@ $navbar-horizontal-padding = 1.5rem
   width 100vw
   padding $navbar-vertical-padding $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
+  background-color #ffffff
+  border-bottom 1px solid #e2e8f0
+  box-shadow 0 1px 3px rgba(0, 0, 0, 0.05)
+  transition background-color 0.3s ease, border-color 0.3s ease
+
   a, span, img
     display inline-block
+
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
     margin-right 0.8rem
     vertical-align top
+    transition transform 0.2s ease
+
+  .logo:hover
+    transform scale(1.05)
+
   .site-name
     font-size 1.3rem
     font-weight 600
-    color $textColor
+    color #1e293b
     position relative
+    transition color 0.2s ease
+
+  .site-name:hover
+    color #3b82f6
+
   .links
     padding-left 1.5rem
     box-sizing border-box
-    background-color white
+    background-color transparent
     white-space nowrap
     font-size 0.9rem
     position absolute
     right $navbar-horizontal-padding
     top $navbar-vertical-padding
     display flex
+    align-items center
+
     .search-box
       flex: 0 0 auto
       vertical-align top
+
+// 深色模式支持
+@media (prefers-color-scheme: dark)
+  .navbar
+    background-color #0f172a
+    border-bottom-color #1e293b
+    box-shadow 0 1px 3px rgba(0, 0, 0, 0.3)
+
+    .site-name
+      color #f1f5f9
+
+    .site-name:hover
+      color #60a5fa
+
+    .links
+      background-color transparent
 
 @media (max-width: $MQMobile)
   .navbar

@@ -1,0 +1,181 @@
+// 侧边栏样式优化
+// 左侧导航侧边栏美化
+
+.sidebar
+  background-color $bg-primary
+  border-right 1px solid $border-color
+  box-shadow 2px 0 12px rgba(0, 0, 0, 0.04)
+  transition background-color 0.3s ease, border-color 0.3s ease
+
+  // 侧边栏链接
+  .sidebar-links
+    padding 2rem 1rem
+
+  .sidebar-group-items
+    margin-top 0.5rem
+
+  a.sidebar-link
+    display block
+    padding 0.5rem 1rem
+    color $text-secondary
+    font-size 0.95rem
+    font-weight 400
+    line-height 1.6
+    border-radius 8px
+    margin-bottom 0.25rem
+    transition all 0.2s ease
+    position relative
+
+    &:hover
+      color $text-primary
+      background-color $bg-secondary
+
+    &.active
+      color $primary-color
+      background-color rgba(59, 130, 246, 0.1)
+      font-weight 500
+
+      &::before
+        content ''
+        position absolute
+        left 0
+        top 50%
+        transform translateY(-50%)
+        width 3px
+        height 60%
+        background $primary-color
+        border-radius 0 2px 2px 0
+
+  // 侧边栏分组
+  .sidebar-group
+    margin-bottom 1rem
+
+    .sidebar-heading
+      display flex
+      align-items center
+      justify-content space-between
+      padding 0.5rem 1rem
+      color $text-primary
+      font-size 0.9rem
+      font-weight 600
+      margin-bottom 0.5rem
+      cursor pointer
+      transition color 0.2s ease
+      user-select none
+
+      &:hover
+        color $primary-color
+
+      .arrow
+        transition transform 0.2s ease
+
+      &:not(.open) .arrow
+        transform rotate(-90deg)
+
+    &.collapsible
+      .sidebar-heading
+        &::after
+          content ''
+          width 0.5rem
+          height 0.5rem
+          border-right 2px solid $text-muted
+          border-bottom 2px solid $text-muted
+          transform rotate(45deg)
+          transition transform 0.2s ease, border-color 0.2s ease
+
+        &:hover::after
+          border-color $primary-color
+
+      &.open
+        .sidebar-heading::after
+          transform rotate(-135deg)
+
+  // 深色模式
+  @media (prefers-color-scheme: dark)
+    background-color #0f172a
+    border-right-color #1e293b
+    box-shadow 2px 0 12px rgba(0, 0, 0, 0.3)
+
+    a.sidebar-link
+      color #94a3b8
+
+      &:hover
+        color #f1f5f9
+        background-color rgba(148, 163, 184, 0.1)
+
+      &.active
+        color #60a5fa
+        background-color rgba(96, 165, 250, 0.15)
+
+        &::before
+          background #60a5fa
+
+    .sidebar-group
+      .sidebar-heading
+        color #f1f5f9
+
+        &:hover
+          color #60a5fa
+
+        &::after
+          border-color #64748b
+
+        &:hover::after
+          border-color #60a5fa
+
+// 侧边栏搜索框
+.sidebar .search-box input
+  background-color $bg-secondary
+  border 1px solid $border-color
+  border-radius 8px
+  padding 0.5rem 1rem 0.5rem 2.25rem
+  font-size 0.9rem
+  color $text-primary
+  transition all 0.2s ease
+
+  &:focus
+    background-color $bg-primary
+    border-color $primary-color
+    outline none
+    box-shadow 0 0 0 3px rgba(59, 130, 246, 0.1)
+
+  &::placeholder
+    color $text-muted
+
+@media (prefers-color-scheme: dark)
+  .sidebar .search-box input
+    background-color rgba(148, 163, 184, 0.1)
+    border-color #334155
+    color #f1f5f9
+
+    &:focus
+      background-color rgba(148, 163, 184, 0.05)
+      border-color #60a5fa
+      box-shadow 0 0 0 3px rgba(96, 165, 250, 0.15)
+
+    &::placeholder
+      color #64748b
+
+// 侧边栏遮罩
+.sidebar-mask
+  background-color rgba(0, 0, 0, 0.5)
+  backdrop-filter blur(4px)
+  transition background-color 0.3s ease
+
+// 移动端侧边栏
+@media (max-width: $MQMobile)
+  .sidebar
+    box-shadow 4px 0 20px rgba(0, 0, 0, 0.2)
+
+    .sidebar-links
+      padding 1rem
+
+    a.sidebar-link
+      padding 0.75rem 1rem
+      font-size 1rem
+
+      &.active::before
+        height 80%
+
+    @media (prefers-color-scheme: dark)
+      box-shadow 4px 0 20px rgba(0, 0, 0, 0.5)

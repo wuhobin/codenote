@@ -1,0 +1,219 @@
+// 页面组件样式优化
+// 页面导航、编辑链接等
+
+// 页面导航
+.page-nav
+  padding-top 2rem
+  padding-bottom 2rem
+  margin-top 2rem
+  border-top 1px solid $border-color
+  display flex
+  justify-content space-between
+  align-items center
+
+  .inner
+    display flex
+    justify-content space-between
+    align-items center
+    width 100%
+
+    .prev
+      .arrow
+        margin-right 0.5rem
+        color $text-muted
+        transition transform 0.2s ease
+
+    .next
+      .arrow
+        margin-left 0.5rem
+        color $text-muted
+        transition transform 0.2s ease
+
+  a
+    display flex
+    align-items center
+    padding 0.75rem 1.25rem
+    background $bg-secondary
+    border 1px solid $border-color
+    border-radius 10px
+    font-size 0.9rem
+    font-weight 500
+    color $text-secondary
+    text-decoration none
+    transition all 0.2s ease
+
+    &:hover
+      background $bg-primary
+      border-color $primary-color
+      color $primary-color
+      box-shadow 0 4px 12px rgba(59, 130, 246, 0.15)
+
+      .arrow
+        transform translateX(-3px)
+
+    &:active
+      transform translateY(1px)
+
+  .next:hover .arrow
+    transform translateX(3px)
+
+  .prev .arrow
+    transform rotate(180deg)
+
+  .prev:hover .arrow
+    transform rotate(180deg) translateX(3px)
+
+// 页面编辑链接
+.page-edit
+  display flex
+  align-items center
+  justify-content flex-end
+  padding 1rem 0
+  margin-bottom 1rem
+
+  .edit-link
+    display inline-flex
+    align-items center
+    gap 0.5rem
+    padding 0.5rem 1rem
+    background $bg-secondary
+    border 1px solid $border-color
+    border-radius 8px
+    font-size 0.85rem
+    font-weight 500
+    color $text-secondary
+    text-decoration none
+    transition all 0.2s ease
+    cursor pointer
+
+    &:hover
+      background $bg-primary
+      border-color $primary-color
+      color $primary-color
+
+    &::before
+      content ''
+      display inline-block
+      width 1rem
+      height 1rem
+      background-image url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>')
+      background-size contain
+      background-repeat no-repeat
+      transition filter 0.2s ease
+
+    &:hover::before
+      filter brightness(1.2)
+
+  .last-updated
+    display flex
+    align-items center
+    gap 0.5rem
+    margin-left 1rem
+    font-size 0.85rem
+    color $text-muted
+
+    .prefix
+      font-weight 500
+
+    .time
+      color $text-secondary
+
+// 深色模式
+@media (prefers-color-scheme: dark)
+  .page-nav
+    border-top-color #334155
+
+    a
+      background rgba(148, 163, 184, 0.1)
+      border-color #334155
+      color #94a3b8
+
+      &:hover
+        background rgba(148, 163, 184, 0.05)
+        border-color #60a5fa
+        color #60a5fa
+        box-shadow 0 4px 12px rgba(96, 165, 250, 0.2)
+
+  .page-edit
+    .edit-link
+      background rgba(148, 163, 184, 0.1)
+      border-color #334155
+      color #94a3b8
+
+      &:hover
+        background rgba(148, 163, 184, 0.05)
+        border-color #60a5fa
+        color #60a5fa
+
+      &::before
+        background-image url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2364758b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>')
+
+    .last-updated
+      color #64748b
+
+      .time
+        color #94a3b8
+
+// 响应式
+@media (max-width: $MQMobile)
+  .page-nav
+    flex-direction column
+    gap 0.75rem
+
+    .inner
+      flex-direction column
+      gap 0.75rem
+
+    a
+      width 100%
+      justify-content center
+
+  .page-edit
+    flex-direction column
+    align-items flex-start
+    gap 0.5rem
+
+    .last-updated
+      margin-left 0
+
+// 回到顶部按钮
+.back-to-top
+  position fixed
+  right 2rem
+  bottom 2rem
+  width 3rem
+  height 3rem
+  background $primary-color
+  border-radius 50%
+  display flex
+  align-items center
+  justify-content center
+  box-shadow 0 4px 12px rgba(59, 130, 246, 0.3)
+  cursor pointer
+  opacity 0
+  visibility hidden
+  transform translateY(20px)
+  transition all 0.3s ease
+  z-index 50
+
+  &.show
+    opacity 1
+    visibility visible
+    transform translateY(0)
+
+  &:hover
+    transform translateY(-4px)
+    box-shadow 0 6px 20px rgba(59, 130, 246, 0.4)
+
+  svg
+    width 1.25rem
+    height 1.25rem
+    color #fff
+
+@media (prefers-color-scheme: dark)
+  .back-to-top
+    background #60a5fa
+    box-shadow 0 4px 12px rgba(96, 165, 250, 0.3)
+
+    &:hover
+      box-shadow 0 6px 20px rgba(96, 165, 250, 0.4)

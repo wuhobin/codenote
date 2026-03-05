@@ -1,0 +1,225 @@
+// 首页增强样式 - 紧凑版
+
+// Hero 区域优化
+.home
+  .hero
+    text-align center
+    padding 1.5rem 1.5rem 1rem
+
+    img
+      max-width 80px
+      height auto
+      margin-bottom 1rem
+      animation hero-float 3s ease-in-out infinite
+
+    h1
+      font-size 2rem
+      font-weight 700
+      margin-bottom 1rem
+      background linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+      -webkit-background-clip text
+      -webkit-text-fill-color transparent
+      background-clip text
+      letter-spacing -0.01em
+
+    .description
+      font-size 1rem
+      color #64748b
+      margin-bottom 1.5rem
+      max-width 500px
+      margin-left auto
+      margin-right auto
+      line-height 1.5
+
+    .action-button
+      display inline-block
+      padding 0.6rem 1.75rem
+      background linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)
+      color #ffffff
+      border-radius 9999px
+      font-size 0.95rem
+      font-weight 600
+      text-decoration none
+      transition all 0.25s ease
+      box-shadow 0 3px 10px rgba(59, 130, 246, 0.35)
+
+      &:hover
+        transform translateY(-1px)
+        box-shadow 0 5px 15px rgba(59, 130, 246, 0.45)
+        background linear-gradient(135deg, #2563eb 0%, #4f46e5 100%)
+
+      &:active
+        transform translateY(0)
+
+// 特性卡片优化 - 紧凑布局
+.home
+  .features
+    padding 0.75rem 0
+    display flex
+    flex-wrap wrap
+    justify-content center
+    gap 1.25rem
+    max-width 1100px
+    margin 0 auto
+
+    .feature
+      flex 0 1 250px
+      padding 1.5rem
+      background #ffffff
+      border-radius 12px
+      border 1px solid #e2e8f0
+      transition all 0.25s ease
+      position relative
+      overflow hidden
+
+      &::before
+        content ''
+        position absolute
+        top 0
+        left 0
+        right 0
+        height 3px
+        background linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)
+        transform scaleX(0)
+        transition transform 0.25s ease
+
+      &:hover
+        transform translateY(-2px)
+        box-shadow 0 8px 24px rgba(0, 0, 0, 0.08)
+        border-color #cbd5e1
+
+        &::before
+          transform scaleX(1)
+
+      h2
+        font-size 1.1rem
+        font-weight 600
+        margin-bottom 0.5rem
+        color #1e293b
+        transition color 0.2s ease
+
+      p
+        color #64748b
+        line-height 1.5
+        font-size 0.875rem
+        margin 0
+
+// 快速链接区域
+.home
+  .quick-links
+    text-align center
+    padding 2rem 1.5rem
+    margin-top 1.5rem
+    background linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)
+    border-radius 12px
+    margin 1.5rem 1.5rem 2.5rem
+
+    h2
+      font-size 1.25rem
+      font-weight 600
+      color #1e293b
+      margin-bottom 1rem
+
+    a
+      display inline-block
+      padding 0.6rem 1.75rem
+      background #ffffff
+      color #3b82f6
+      border 2px solid #3b82f6
+      border-radius 8px
+      font-weight 600
+      font-size 0.9rem
+      text-decoration none
+      transition all 0.25s ease
+
+      &:hover
+        background #3b82f6
+        color #ffffff
+        transform translateY(-1px)
+        box-shadow 0 3px 10px rgba(59, 130, 246, 0.25)
+
+// 动画定义
+@keyframes hero-float
+  0%, 100%
+    transform translateY(0)
+  50%
+    transform translateY(-6px)
+
+// 深色模式支持
+@media (prefers-color-scheme: dark)
+  .home
+    .hero
+      h1
+        background linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)
+        -webkit-background-clip text
+        background-clip text
+
+      .description
+        color #94a3b8
+
+    .features
+      .feature
+        background #1e293b
+        border-color #334155
+        box-shadow 0 2px 4px rgba(0, 0, 0, 0.2)
+
+        &:hover
+          box-shadow 0 8px 24px rgba(0, 0, 0, 0.4)
+          border-color #475569
+
+        h2
+          color #f1f5f9
+
+        p
+          color #94a3b8
+
+    .quick-links
+      background linear-gradient(135deg, #0f172a 0%, #1e293b 100%)
+
+      h2
+        color #f1f5f9
+
+      a
+        background #1e293b
+        color #60a5fa
+        border-color #60a5fa
+
+        &:hover
+          background #60a5fa
+          color #ffffff
+
+// 响应式优化
+@media (max-width: $MQNarrow)
+  .home
+    .hero
+      h1
+        font-size 1.75rem
+
+    .features
+      gap 1rem
+
+      .feature
+        flex 0 1 220px
+        padding 1.25rem
+
+@media (max-width: $MQMobile)
+  .home
+    .hero
+      padding 1.5rem 1rem
+
+      h1
+        font-size 1.5rem
+
+      .description
+        font-size 0.9rem
+
+    .features
+      gap 0.875rem
+
+      .feature
+        flex 1 1 100%
+        padding 1rem
+
+    .quick-links
+      margin 1rem 1rem 1.5rem
+      padding 1.5rem 1rem

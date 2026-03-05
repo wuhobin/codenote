@@ -93,7 +93,7 @@ function flatten (items, res) {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .page-sidebar
   font-size 12px
   width 3.8rem
@@ -139,22 +139,30 @@ function flatten (items, res) {
   margin-left: 16px;
   width: 240px;
   background: #fff;
-  border: 1px solid #eee;
-  // -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-  // box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-  // border-radius: 4px;
+  border: 1px solid #e2e8f0;
   left: unset;
   right: 100%;
   margin-right: 10px;
   margin-left: 0;
+  border-radius 8px
+  box-shadow 0 4px 12px rgba(0, 0, 0, 0.1)
+  transition all 0.2s ease
   .on
     display: block;
   .pos-box
     position: relative;
     padding: 16px;
     .icon-arrow
-      position: relative;
-      margin-left: -20px;
+      position: absolute;
+      top 16px
+      right -6px
+      width 10px
+      height 10px
+      background #fff
+      border 1px solid #e2e8f0
+      border-left none
+      border-bottom none
+      transform rotate(-45deg)
     .scroll-box
       overflow-x: hidden;
       overflow-y: hidden;
@@ -188,50 +196,45 @@ function flatten (items, res) {
   right 10px
   top 70px !important
   width 44px
+  background #fff
+  border 1px solid #e2e8f0
+  border-radius 12px
+  box-shadow 0 2px 12px rgba(0, 0, 0, 0.08)
+  transition all 0.3s ease
   div.option-box:last-child
-    border-top 0px solid #eee
+    border-top 1px solid #f1f5f9
   div.option-box.on
     .toc-container
       display block
   div.option-box
     font-size 12px
     position relative
-    display -webkit-box
-    display -ms-flexbox
     display flex
-    -webkit-box-orient vertical
-    -webkit-box-direction normal
-    -ms-flex-direction column
     flex-direction column
-    -webkit-box-align center
-    -ms-flex-align center
     align-items center
-    -webkit-box-pack center
-    -ms-flex-pack center
     justify-content center
-    border-bottom 1px solid #eee
     background-color #fff
     height 60px
     cursor pointer
+    transition all 0.2s ease
+    &:hover
+      background #f8fafc
     .img
       margin-top 2px
     .show-txt
-      color gray
+      color #64748b
       margin-top 3px
       font-size 11px
+      transition color 0.2s ease
+  div.option-box:hover
+    .show-txt
+      color #3b82f6
   div.option-box-toc-over
     font-size 12px
     position relative
     display none
-    -webkit-box-orient vertical
-    -webkit-box-direction normal
-    -ms-flex-direction column
     flex-direction column
-    -webkit-box-align center
-    -ms-flex-align center
     align-items center
-    -webkit-box-pack center
-    -ms-flex-pack center
     justify-content center
     border-bottom 1px solid #eee
     background-color #fff
@@ -240,26 +243,23 @@ function flatten (items, res) {
     .img
       margin-top 2px
     .show-txt
-      color gray
+      color #94a3b8
       margin-top 3px
       font-size 11px
     .toc-container
       margin-right 0
+  div.option-box-toc-over:hover
+    color #60a5fa
+    background rgba(96, 165, 250, 0.05)
+  div.option-box-toc-over.on
+    .toc-container
+      display block
   div.option-box-toc
     font-size 12px
     position relative
-    display -webkit-box
-    display -ms-flexbox
     display flex
-    -webkit-box-orient vertical
-    -webkit-box-direction normal
-    -ms-flex-direction column
     flex-direction column
-    -webkit-box-align center
-    -ms-flex-align center
     align-items center
-    -webkit-box-pack center
-    -ms-flex-pack center
     justify-content center
     border-bottom 1px solid #eee
     background-color #fff
@@ -268,18 +268,9 @@ function flatten (items, res) {
     .img
       margin-top 2px
     .show-txt
-      color gray
+      color #94a3b8
       margin-top 3px
       font-size 11px
-  div.option-box:hover
-    color white
-    background #eee
-  div.option-box-toc-over:hover
-    color white
-    background #eee
-  div.option-box-toc-over.on
-    .toc-container
-      display block
   div.option-box-toc
     display none
 
@@ -334,9 +325,9 @@ function flatten (items, res) {
   padding: 0 10px;
   width: 850px;
   background: #fff;
-  -webkit-box-shadow: 1px -2px 10px 7px rgba(0,0,0,0.08);
-  box-shadow: 1px -2px 10px 7px rgba(0,0,0,0.08);
-  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0
   left: unset;
   right: 100%;
   margin-right: 2px;
@@ -346,9 +337,10 @@ function flatten (items, res) {
     font-size: 13px;
     text-align: center;
     padding: 3px 2px;
-    border-bottom: 1px solid #eaecef;
-    background: #42b983;
+    border-bottom: 1px solid #e2e8f0;
+    background: #3b82f6;
     color: white;
+    border-radius 8px 8px 0 0
     .sitemap-top-link
       color: white;
       font-size: 10px;
@@ -367,6 +359,7 @@ function flatten (items, res) {
   .page-side-toolbar
     right 6px
     top 65px !important
+    border-radius 8px
     div.option-box-toc-over
       display flex
   .page-side-sitemap
@@ -382,4 +375,46 @@ function flatten (items, res) {
         top calc(1rem - 2px)
     & > .sidebar-links
       padding 1rem 0
+
+// 深色模式
+@media (prefers-color-scheme: dark)
+  .page-side-toolbar
+    background #1e293b
+    border-color #334155
+    box-shadow 0 2px 12px rgba(0, 0, 0, 0.3)
+
+    div.option-box
+      background #1e293b
+
+      &:hover
+        background rgba(148, 163, 184, 0.1)
+
+      .show-txt
+        color #94a3b8
+
+    div.option-box:hover .show-txt
+      color #60a5fa
+
+    div.option-box:last-child
+      border-top-color #334155
+
+  .toc-container
+    background #1e293b
+    border-color #334155
+    box-shadow 0 4px 12px rgba(0, 0, 0, 0.3)
+
+    .pos-box .icon-arrow
+      background #1e293b
+      border-color #334155
+      border-left none
+      border-bottom none
+
+  .sitemap-container
+    background #1e293b
+    border-color #334155
+    box-shadow 0 8px 24px rgba(0, 0, 0, 0.4)
+
+    h4
+      background #60a5fa
+      border-bottom-color #334155
 </style>
