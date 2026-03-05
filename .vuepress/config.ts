@@ -122,6 +122,13 @@ export default defineConfig({
         clientId: 'c5c8d81617d1d0029b1d',
         clientSecret: 'dcc49fe9ec8bad90332473e33586949b5f9e0cb4',
       },
+    ],
+     [
+      'vuepress-plugin-reading-progress',
+      {
+        color: '#3eaf7c',
+        height: '3px',
+      },
     ]
   ],
   // 主题配置
