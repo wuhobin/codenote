@@ -120,7 +120,7 @@ export default defineConfig({
         autoCreateIssue: true,
         locale: "zh",
         clientId: 'c5c8d81617d1d0029b1d',
-        clientSecret: '3219e621ded4dbdab9c79a2efe5d8283885d9b96',
+        clientSecret: 'dcc49fe9ec8bad90332473e33586949b5f9e0cb4',
       },
     ]
   ],

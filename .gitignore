@@ -125,3 +125,5 @@ dist
 /.vuepress/dist/
 
 CLAUDE.md
+
+.claude/
