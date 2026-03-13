@@ -32,6 +32,21 @@ html
   font-size 16px
   scroll-behavior smooth
 
+// ========================================
+// 页面切换过渡动画
+// ========================================
+.fade-slide-enter-active,
+.fade-slide-leave-active
+  transition all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+
+.fade-slide-enter
+  opacity 0
+  transform translateY(16px)
+
+.fade-slide-leave-to
+  opacity 0
+  transform translateY(-16px)
+
 body
   font-family $body-font-family
   color $text-primary

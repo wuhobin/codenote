@@ -27,25 +27,30 @@
       </template>
     </Sidebar>
 
-    <Home v-if="$page.frontmatter.home" />
+    <transition name="fade-slide" mode="out-in">
+      <Home v-if="$page.frontmatter.home" key="home" />
+    </transition>
 
     <div v-if="$page.frontmatter.home" class="home-footer-wrapper">
       <Footer />
     </div>
 
-    <Page
-      v-else
-      :sidebar-items="sidebarItems"
-      :page-sidebar-items="pageSidebarItems"
-    >
-      <template #top>
-        <slot name="page-top" />
-      </template>
-      <template #bottom>
-        <slot name="page-bottom" />
-        <Footer />
-      </template>
-    </Page>
+    <transition name="fade-slide" mode="out-in">
+      <Page
+        v-if="!$page.frontmatter.home"
+        :key="$page.path"
+        :sidebar-items="sidebarItems"
+        :page-sidebar-items="pageSidebarItems"
+      >
+        <template #top>
+          <slot name="page-top" />
+        </template>
+        <template #bottom>
+          <slot name="page-bottom" />
+          <Footer />
+        </template>
+      </Page>
+    </transition>
 
     <PageSidebar
        v-if="shouldShowPageSidebar"

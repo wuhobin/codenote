@@ -34,6 +34,18 @@ export default [
         ]
     },
     {
+        text: "Vibe coding",
+        link: '/Vibe coding/',
+        items: [
+            {
+                text: "Skill分享", link: "/Vibe coding/#Skill分享",
+            },
+            {
+                text: "实战案例", link: "/Vibe coding/#实战案例",
+            }
+        ]
+    },
+    {
         text: "作者",
         link: '/author'
     },
