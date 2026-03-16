@@ -33,6 +33,8 @@ Skill 通过**强制工作流**解决这些问题，让 AI 表现得像一个有
 
 ### 📖 [深度解析 Superpowers](./深度解析%20Superpowers.md)
 
+### 📖 [OpenSpec 完全使用指南：用规格驱动 AI 编码](./OpenSpec%20完全使用指南：用规格驱动%20AI%20编码.md)
+
 
 ---
 

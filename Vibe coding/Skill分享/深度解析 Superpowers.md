@@ -791,3 +791,5 @@ description: Use when [只写触发条件，不写流程]
 > **文档版本**：2026-03-13
 > **基于项目**：[Superpowers](https://github.com/obra/superpowers) by Jesse Vincent (obra)
 > **适配环境**：Windsurf + Cursor + OpenCode on Windows
+
+<Vssue :title="$title" />
